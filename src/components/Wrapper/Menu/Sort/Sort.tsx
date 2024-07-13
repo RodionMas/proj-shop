@@ -1,7 +1,8 @@
 import React from "react";
 import style from "./Sort.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { changeSortText, selectFilter, sortTextReducer } from "../../../../store/filterSlice";
+import { changeSortText, sortTextReducer } from "../../../../store/filterSlice";
+import { selectFilter } from "../../../../cart/selectors";
 
 const Sort: React.FC = React.memo(() => {
 

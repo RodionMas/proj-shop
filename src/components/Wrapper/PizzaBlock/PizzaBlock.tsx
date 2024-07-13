@@ -2,8 +2,8 @@ import style from "./PizzaBlock.module.css";
 import Pizza from "./Pizza/Pizza";
 import MyLoader from "./MyLoader/MyLoader";
 import { useSelector } from "react-redux";
-import { ContentType, selectContent } from "../../../store/contentSlice";
-import { selectHeader } from "../../../store/headerSlice";
+import { ContentType } from "../../../store/contentSlice";
+import { selectContent, selectHeader } from "../../../cart/selectors";
 
 type PizzaType = {
   imageUrl: string;

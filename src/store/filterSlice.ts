@@ -25,9 +25,9 @@ type ChangeObjType = {
 };
 
 enum Status {
-  PENDING = 'pending',
-  FULFILLED = 'fulfilled',
-  REJECTED = 'rejected'
+  PENDING = "pending",
+  FULFILLED = "fulfilled",
+  REJECTED = "rejected",
 }
 
 interface FilterSliceState {
@@ -119,7 +119,7 @@ export const filterSlice = createSlice({
       } else if (action.payload === "Закрытые") {
         state.changeObj.filterURL = 5;
       } else if (action.payload === "Все") {
-        state.changeObj.filterURL = '';
+        state.changeObj.filterURL = "";
       }
     },
   },
@@ -139,10 +139,8 @@ export const filterSlice = createSlice({
   },
 });
 
-export type AppDispatch = typeof store.dispatch
-export const useAppDispatch = useDispatch.withTypes<AppDispatch>()
-
-export const selectFilter = (state: RootState) => state.filterReducer;
+export type AppDispatch = typeof store.dispatch;
+export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
 
 export const {
   isActiveReducer,

@@ -5,7 +5,7 @@ import Menu from "../Menu/Menu";
 import style from "./Content.module.css";
 import Pagination from "./Pagination/Pagination";
 import { useSelector } from "react-redux";
-import { selectContent } from "../../../store/contentSlice";
+import { selectContent } from "../../../cart/selectors";
 
 const Content: React.FC = () => {
   const {pizzas, status} = useSelector(selectContent)

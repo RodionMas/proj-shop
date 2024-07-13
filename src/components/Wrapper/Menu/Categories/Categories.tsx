@@ -1,9 +1,10 @@
 import React from "react";
 import style from "./Categories.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { filterReducer, isActiveReducer, selectFilter } from "../../../../store/filterSlice";
+import { filterReducer, isActiveReducer } from "../../../../store/filterSlice";
 // @ts-ignore
 import debounce from "lodash.debounce";
+import { selectFilter } from "../../../../cart/selectors";
 
 export default React.memo(function Categories(){
   // useWhyDidYouUpdate('Categories', )

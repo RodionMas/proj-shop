@@ -36,8 +36,6 @@ export const headerSlice = createSlice({
   },
 });
 
-export const selectHeader = (state: RootState) => state.headerReducer;
-
 export const { inpSearchReducer, filterArrReducer } = headerSlice.actions;
 
 export default headerSlice.reducer;

@@ -8,11 +8,10 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   filterArrReducer,
   inpSearchReducer,
-  selectHeader,
 } from "../../../store/headerSlice";
-import { selectContent } from "../../../store/contentSlice";
 // @ts-ignore
 import debounce from "lodash.debounce";
+import { selectContent, selectHeader } from "../../../cart/selectors";
 
 
 const Search: React.FC = () => {

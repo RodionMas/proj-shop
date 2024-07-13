@@ -3,9 +3,10 @@ import style from "./Pizza.module.css";
 
 import cn from "classnames";
 import { useDispatch, useSelector } from "react-redux";
-import { addItemsReducer, selectCart } from "../../../../store/cartSlice";
+import { addItemsReducer } from "../../../../store/cartSlice";
 import { Link } from "react-router-dom";
 import { ContentType } from "../../../../store/contentSlice";
+import { selectCart } from "../../../../cart/selectors";
 
 type PizzaProps = {
   imageUrl: string;

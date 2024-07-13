@@ -5,13 +5,12 @@ import cn from "classnames";
 import { Link, useLocation } from "react-router-dom";
 import Search from "./Search/Search";
 import { useSelector } from "react-redux";
-import { selectCart } from "../../store/cartSlice";
+import { selectCart } from "../../cart/selectors";
 
 export default React.memo(function Header() {
   const { pathname } = useLocation();
   const classBtn = cn(style.button, style.buttonCart);
-  const { count } = useSelector(selectCart);
-  const { totalPrice, items } = useSelector(selectCart);
+  const { totalPrice, items, count } = useSelector(selectCart);
   const isMounted = React.useRef(false)
   React.useEffect(() => {
     if (isMounted.current) {

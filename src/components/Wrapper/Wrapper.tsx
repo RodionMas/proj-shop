@@ -8,8 +8,9 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import { useDispatch, useSelector } from "react-redux";
 import { changeLoading, fetchPizzas, useAppDispatch } from "../../store/contentSlice";
-import { selectFilter } from "../../store/filterSlice";
+
 import PagePizza from "../PagePizza/PagePizza";
+import { selectFilter } from "../../cart/selectors";
 
 // type ChangeObjTS = {
 //   sortURL: string;

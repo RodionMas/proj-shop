@@ -20,9 +20,9 @@ export type ContentType = {
 };
 
 enum Status {
-  PENDING = 'pending',
-  FULFILLED = 'fulfilled',
-  REJECTED = 'rejected',
+  PENDING = "pending",
+  FULFILLED = "fulfilled",
+  REJECTED = "rejected",
 }
 
 interface ContentSliceState {
@@ -52,8 +52,8 @@ export const fetchPizzas = createAsyncThunk<ContentType[], ChangeObjType>(
       return response.data;
     } catch (error) {
       throw rejectWithValue({
-        error: 'Oh no!',
-      })
+        error: "Oh no!",
+      });
     }
   }
 );
@@ -96,10 +96,8 @@ export const contentSlice = createSlice({
   },
 });
 
-type AppDispatch = typeof store.dispatch
-export const useAppDispatch = useDispatch.withTypes<AppDispatch>()
-
-export const selectContent = (state: RootState) => state.contentReducer;
+type AppDispatch = typeof store.dispatch;
+export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
 
 export const { changeLoading, addItemReducer } = contentSlice.actions;
 

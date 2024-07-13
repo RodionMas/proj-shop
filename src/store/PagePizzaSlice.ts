@@ -14,9 +14,9 @@ type ContentType = {
 };
 
 enum Status {
-  PENDING = 'pending',
-  FULFILLED = 'fulfilled',
-  REJECTED = 'rejected' 
+  PENDING = "pending",
+  FULFILLED = "fulfilled",
+  REJECTED = "rejected",
 }
 
 interface PagePizzaSliceState {
@@ -52,7 +52,7 @@ const initialState: PagePizzaSliceState = {
     sizes: [],
     price: 0,
     types: [],
-    id: ""
+    id: "",
   },
 };
 
@@ -76,10 +76,8 @@ export const PagePizzaSlice = createSlice({
   },
 });
 
-type AppDispatch = typeof store.dispatch
-export const useAppDispatch = useDispatch.withTypes<AppDispatch>()
-
-export const selectPagePizza = (state: RootState) => state.PagePizzaReducer;
+type AppDispatch = typeof store.dispatch;
+export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
 
 // export const {} = PagePizzaSlice.actions;
 

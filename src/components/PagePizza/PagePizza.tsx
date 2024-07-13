@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { fetchPizza, selectPagePizza, useAppDispatch } from "../../store/PagePizzaSlice";
+import { fetchPizza, useAppDispatch } from "../../store/PagePizzaSlice";
+import { selectPagePizza } from "../../cart/selectors";
 
 const PagePizza = () => {
   const appDispatch = useAppDispatch()

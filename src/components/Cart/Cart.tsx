@@ -1,15 +1,15 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CartItem from "./CartItem/CartItem";
-import { clearBasket, selectCart } from "../../store/cartSlice";
+import { clearBasket } from "../../store/cartSlice";
 import { Link } from "react-router-dom";
 import EmptyCart from "../NotFound/EmptyCart";
+import { selectCart } from "../../cart/selectors";
 
 const Cart: React.FC = () => {
   const dispatch = useDispatch();
-  const {totalPrice} = useSelector(selectCart);
-  const {items} = useSelector(selectCart);
-  const {count} = useSelector(selectCart);
+  const {totalPrice, items, count} = useSelector(selectCart);
+
   return (
     <>
       {!items.length ? (

@@ -1,7 +1,8 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
 import { useDispatch, useSelector } from "react-redux";
-import { changePageReducer, fetchPagination, selectFilter, useAppDispatch } from "../../../../store/filterSlice";
+import { changePageReducer, fetchPagination, useAppDispatch } from "../../../../store/filterSlice";
+import { selectFilter } from "../../../../cart/selectors";
 
 const Pagination = () => {
   const dispatch = useDispatch();
