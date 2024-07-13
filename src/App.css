@@ -15,6 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #232323;
+  background-color: #ffdf8c;
 }
 a,
 span,
@@ -38,7 +39,7 @@ h2 {
 a {
   text-decoration: none;
 }
-.header {
+/* .header {
   border-bottom: 1px solid #f6f6f6;
   padding: 40px 0;
 }
@@ -52,8 +53,8 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-.header__logo {
+} */
+/* .header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,7 +71,7 @@ a {
 }
 .header__logo p {
   color: #7b7b7b;
-}
+} */
 .button {
   display: inline-block;
   background-color: #fe5f1e;
@@ -206,167 +207,8 @@ a {
   font-weight: 600;
   font-size: 16px;
 }
-.categories ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.categories ul li {
-  background-color: #f9f9f9;
-  padding: 13px 30px;
-  border-radius: 30px;
-  margin-right: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  -webkit-transition: background-color 0.1s ease-in-out;
-  transition: background-color 0.1s ease-in-out;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.categories ul li:hover {
-  background-color: #f4f4f4;
-}
-.categories ul li:active {
-  background-color: #ececec;
-}
-.categories ul li.active {
-  background-color: #282828;
-  color: #fff;
-}
-.sort {
-  position: relative;
-}
-.sort__label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-.sort__label svg {
-  margin-right: 8px;
-}
-.sort__label b {
-  margin-right: 8px;
-}
-.sort__label span {
-  color: #fe5f1e;
-  border-bottom: 1px dashed #fe5f1e;
-  cursor: pointer;
-}
-.sort__popup {
-  position: absolute;
-  right: 0;
-  margin-top: 15px;
-  background: #ffffff;
-  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 10px 0;
-  width: 160px;
-}
-.sort__popup ul {
-  overflow: hidden;
-}
-.sort__popup ul li {
-  padding: 12px 20px;
-  cursor: pointer;
-}
-.sort__popup ul li.active,
-.sort__popup ul li:hover {
-  background: rgba(254, 95, 30, 0.05);
-}
-.sort__popup ul li.active {
-  font-weight: bold;
-  color: #fe5f1e;
-}
-.pizza-block {
-  width: 280px;
-  text-align: center;
-  margin-bottom: 65px;
-}
-.pizza-block:not(:nth-of-type(4n)) {
-  margin-right: 35px;
-}
-.pizza-block__image {
-  width: 260px;
-}
-.pizza-block__title {
-  font-size: 20px;
-  font-weight: 900;
-  letter-spacing: 1%;
-  margin-bottom: 20px;
-}
-.pizza-block__selector {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #f3f3f3;
-  border-radius: 10px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 6px;
-}
-.pizza-block__selector ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-.pizza-block__selector ul:first-of-type {
-  margin-bottom: 6px;
-}
-.pizza-block__selector ul li {
-  padding: 8px;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 14px;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.pizza-block__selector ul li.active {
-  background: #ffffff;
-  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
-  border-radius: 5px;
-  cursor: auto;
-}
-.pizza-block__bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.pizza-block__price {
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 27px;
-  letter-spacing: 0.015em;
-}
-body {
-  background-color: #ffdf8c;
-}
+
+
 .wrapper {
   width: calc(100vw - 100px);
   height: 100%;
