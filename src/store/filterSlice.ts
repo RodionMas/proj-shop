@@ -1,45 +1,10 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
-import { RootState, store } from "./store";
+import {  store } from "./store";
 import { useDispatch } from "react-redux";
+import { FilterSliceState, Status } from "../cart/types";
 
-// type ContentType = {
-//   imageUrl: string;
-//   title: string;
-//   sizes: number[];
-//   price: number;
-//   types: number[];
-//   id: string;
-//   count: number;
-// };
 
-type SortArrType = {
-  text: "популярности" | "цене" | "алфавиту";
-  id: number;
-};
-
-type ChangeObjType = {
-  changePage: number;
-  sortURL: string;
-  filterURL: number | string;
-};
-
-enum Status {
-  PENDING = "pending",
-  FULFILLED = "fulfilled",
-  REJECTED = "rejected",
-}
-
-interface FilterSliceState {
-  isActive: number;
-  sortArr: SortArrType[];
-  sortTextIndex: number;
-  categoryArr: string[];
-  changeObj: ChangeObjType;
-  status: Status;
-  error: null | string | unknown;
-  pageCount: number;
-}
 
 export const fetchPagination = createAsyncThunk(
   "content/fetchPagination",

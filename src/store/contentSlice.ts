@@ -1,38 +1,13 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
-import { RootState, store } from "./store";
+import { store } from "./store";
 import { useDispatch } from "react-redux";
-
-type ChangeObjType = {
-  changePage: number;
-  sortURL: string;
-  filterURL: string | number;
-};
-
-export type ContentType = {
-  imageUrl: string;
-  title: string;
-  sizes: number[];
-  price: number;
-  types: number[];
-  id: string;
-  count: number;
-};
-
-enum Status {
-  PENDING = "pending",
-  FULFILLED = "fulfilled",
-  REJECTED = "rejected",
-}
-
-interface ContentSliceState {
-  pageCount: number[];
-  pizzas: ContentType[];
-  item: ContentType[];
-  status: Status;
-  error: null | string | unknown;
-  isLoading: boolean;
-}
+import {
+  ChangeObjType,
+  ContentSliceState,
+  ContentType,
+  Status,
+} from "../cart/types";
 
 const mainURL = "https://62f6c299a3bce3eed7c7622d.mockapi.io/items";
 

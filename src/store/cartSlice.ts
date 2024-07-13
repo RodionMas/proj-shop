@@ -1,25 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "./store";
-import { getLocalStorage } from "../utils/ItemLocalStorage";
 
-type CartItem = {
-  typeItem: string | number;
-  sizePizza: number;
-  imageUrl: string;
-  title: string;
-  sizes: number[];
-  price: number;
-  types: number[];
-  id: string;
-  count: number;
-};
-// interface типизирует только объект и есть негласное правило
-// обычно state типизируют interface'ом, либо какие-то большие объекты
-interface CartSliceState {
-  items: CartItem[];
-  totalPrice: number;
-  count: number;
-}
+import { getLocalStorage } from "../utils/ItemLocalStorage";
+import { CartItem, CartSliceState } from "../cart/types";
 
 const initialState: CartSliceState = {
   items: getLocalStorage('item'),

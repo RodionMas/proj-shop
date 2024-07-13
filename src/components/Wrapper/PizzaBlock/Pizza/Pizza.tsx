@@ -5,32 +5,10 @@ import cn from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemsReducer } from "../../../../store/cartSlice";
 import { Link } from "react-router-dom";
-import { ContentType } from "../../../../store/contentSlice";
 import { selectCart } from "../../../../cart/selectors";
+import { ErrorCountContentType } from "../../../../cart/types";
 
-type PizzaProps = {
-  imageUrl: string;
-  title: string;
-  sizes: number[];
-  price: number;
-  types: number[];
-  id: string;
-  count: number;
-}
-
-// type ItemForCartType = {
-//   typeItem: string;
-//   sizePizza: number;
-//   imageUrl: string;
-//   title: string;
-//   sizes: number[];
-//   price: number;
-//   types: number[];
-//   id: string;
-//   count: number;
-// }
-
-const Pizza: React.FC<ContentType> = ({
+const Pizza: React.FC<ErrorCountContentType> = ({
   imageUrl,
   title,
   sizes,

@@ -2,18 +2,10 @@ import style from "./PizzaBlock.module.css";
 import Pizza from "./Pizza/Pizza";
 import MyLoader from "./MyLoader/MyLoader";
 import { useSelector } from "react-redux";
-import { ContentType } from "../../../store/contentSlice";
 import { selectContent, selectHeader } from "../../../cart/selectors";
+import { ContentType, PizzaType } from "../../../cart/types";
 
-type PizzaType = {
-  imageUrl: string;
-  title: string;
-  sizes: number[];
-  price: number;
-  types: number[];
-  id: string;
-  count: number;
-}
+
 
 const PizzaBlock: React.FC = () => {
   const { searchText, filterArr } = useSelector(selectHeader);

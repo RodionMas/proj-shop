@@ -1,20 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "./store";
+import { FilterArrType, HeaderSliceState } from "../cart/types";
 
-type FilterArrType = {
-  imageUrl: string;
-  title: string;
-  sizes: number[];
-  price: number;
-  types: number[];
-  id: string;
-  count: number;
-};
 
-interface HeaderSliceState {
-  searchText: string;
-  filterArr: FilterArrType[];
-}
 
 const initialState: HeaderSliceState = {
   searchText: "",
