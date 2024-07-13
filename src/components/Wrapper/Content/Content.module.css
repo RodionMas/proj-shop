@@ -1,0 +1,13 @@
+.content {
+    padding: 40px 0;
+  }
+  .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .error{
+      margin: 0 auto;
+      text-align: center;
+      font-size: 30px;
+      margin: 200px 0px;
+    }

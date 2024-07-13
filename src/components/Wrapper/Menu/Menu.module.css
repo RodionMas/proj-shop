@@ -1,0 +1,16 @@
+.content__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 1280px) {
+    .content__top {
+      flex-direction: column;
+    }
+  }
