@@ -1,12 +1,14 @@
-import React from "react";
+import React, { Suspense } from "react";
 import PizzaBlock from "../PizzaBlock/PizzaBlock";
 import Menu from "../Menu/Menu";
 
 import style from "./Content.module.css";
-import Pagination from "./Pagination/Pagination";
+// import Pagination from "./Pagination/Pagination";
 import { useSelector } from "react-redux";
 import { selectContent } from "../../../cart/selectors";
+import { lazy } from 'react';
 
+const Pagination = lazy(() => import('./Pagination/Pagination'));
 const Content: React.FC = () => {
   const {pizzas, status} = useSelector(selectContent)
   return (
@@ -21,7 +23,9 @@ const Content: React.FC = () => {
           <PizzaBlock />
         )}
       </div>
+      <Suspense fallback={<h1>Pagination button</h1>}>
       <Pagination />
+      </Suspense>
       </>}
     </div>
   );

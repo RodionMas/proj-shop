@@ -1,0 +1,13 @@
+.wrapper{
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.price{
+    display: block;
+}
+.text{
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}

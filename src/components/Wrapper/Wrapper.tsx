@@ -5,20 +5,18 @@ import style from "./Wrapper.module.css";
 import Header from "../Header/Header";
 import Content from "./Content/Content";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import Cart from "../Cart/Cart";
+// import Cart from "../Cart/Cart";
 import { useDispatch, useSelector } from "react-redux";
 import { changeLoading, fetchPizzas, useAppDispatch } from "../../store/contentSlice";
-
-import PagePizza from "../PagePizza/PagePizza";
+// import PagePizza from "../PagePizza/PagePizza";
 import { selectFilter } from "../../cart/selectors";
 
-// type ChangeObjTS = {
-//   sortURL: string;
-//   filterURL: string;
-//   changePage: number;
-// }
+import { lazy } from 'react';
 
+const PagePizza = lazy(() => import(/* webpackChunkName: "PagePizza" */'../PagePizza/PagePizza'));
+const Cart = lazy(() => import(/* webpackChunkName: "Cart" */'../Cart/Cart'));
 const Wrapper = () => {
+
   const dispatch = useDispatch();
   const appDispatch = useAppDispatch()
   const { changeObj } = useSelector(selectFilter);
@@ -41,8 +39,16 @@ const Wrapper = () => {
       <Header />
       <Routes>
         <Route index element={<Content />} />
-        <Route path="/pizza/:id" element={<PagePizza />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/pizza/:id" element={(
+          <React.Suspense fallback={<div>Зарузка...</div>}>
+            <PagePizza />
+          </React.Suspense>
+        )} />
+        <Route path="/cart" element={(
+          <React.Suspense fallback={<div>Зарузка...</div>}>
+            <Cart />
+          </React.Suspense>
+        )} />
       </Routes>
     </div>
   );
